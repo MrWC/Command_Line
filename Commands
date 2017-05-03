@@ -1,8 +1,10 @@
 Windows
 pscp -r C:\nseDL-GPU\train_hierarchical.py i316911@lssinh033.sin.sap.corp:/home/i316911/Code/
 
-
-
+# setup Windows 10 wifi hotspot
+netsh wlan set hostednetwork mode=allow ssid=YourSSIDName key=YourKey
+netsh wlan start hostednetwork
+netsh wlan stop hostednetwork
 
 
 Bash:
