@@ -1,0 +1,33 @@
+Windows
+pscp -r C:\nseDL-GPU\train_hierarchical.py i316911@lssinh033.sin.sap.corp:/home/i316911/Code/
+
+
+
+
+
+Bash:
+htop # to check CPU usage
+cp -r /home/i316911/Code/manual /data/i316911/NSE/
+rm -r mydir
+which python
+sudo apt-get install python3-pip
+
+#install pip3
+curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+python3 get-pip.py
+
+
+
+Docker:
+nvidia-docker run -it --name NSE -v /home/i316911/Code:/Code -v /data/i316911/:/data i316911/tfs-gpu bash
+nvidia-docker run -it --name i316911-py3 -v /home/i316911/Code:/Code -v /data/i316911/:/data tensorflow/tensorflow:1.0.0-gpu-py3 bash
+docker ps
+docker commit 982a6d87bffb  i316911/tfs-gpu:latest
+
+Anaconda
+conda update -all
+activate --py27
+jupyter note book
+conda install XXXXX
+pip install XXXXX (intall in the activated env)
+pip list (list the libraries of the activated env)
