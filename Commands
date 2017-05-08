@@ -26,6 +26,8 @@ nvidia-docker run -it --name i316911-py3 -v /home/i316911/Code:/Code -v /data/i3
 docker ps
 docker commit 499cd79407bf  i316911/tfs-gpu-py3:latest
 docker exec -it CWang-01 bash #** exec command in already running container
+docker container stop 499cd79407bf # stop contrainer
+docker container rm -v 499cd79407bf # remove contrainer
 
 
 Anaconda
