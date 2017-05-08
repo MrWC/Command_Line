@@ -23,8 +23,9 @@ python3 get-pip.py
 Docker:
 nvidia-docker run -it --name NSE -v /home/i316911/Code:/Code -v /data/i316911/:/data i316911/tfs-gpu bash
 nvidia-docker run -it --name i316911-py3 -v /home/i316911/Code:/Code -v /data/i316911/:/data tensorflow/tensorflow:1.0.0-gpu-py3 bash
+nvidia-docker run -it --name CWang-01 -v /home/i316911/Code:/Code -v /data/i316911/:/data i316911/tfs-gpu-py3 bash
 docker ps
-docker commit 499cd79407bf  i316911/tfs-gpu-py3:latest
+docker commit e2e1f28dde1d  i316911/tfs-gpu-py3:latest
 docker exec -it CWang-01 bash #** exec command in already running container
 docker container stop 499cd79407bf # stop contrainer
 docker container rm -v 499cd79407bf # remove contrainer
