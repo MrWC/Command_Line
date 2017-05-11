@@ -25,6 +25,7 @@ nvidia-docker run -it --name NSE -v /home/i316911/Code:/Code -v /data/i316911/:/
 nvidia-docker run -it --name i316911-py3 -v /home/i316911/Code:/Code -v /data/i316911/:/data tensorflow/tensorflow:1.0.0-gpu-py3 bash
 nvidia-docker run -it --name CWang-01 -v /home/i316911/Code:/Code -v /data/i316911/:/data i316911/tfs-gpu-py3 bash
 docker ps
+docker pull mrwcpr/docker_image
 docker commit e2e1f28dde1d  i316911/tfs-gpu-py3:latest
 docker exec -it CWang-01 bash #** exec command in already running container
 docker container stop 499cd79407bf # stop contrainer
