@@ -40,3 +40,9 @@ jupyter note book
 conda install XXXXX
 pip install XXXXX (intall in the activated env)
 pip list (list the libraries of the activated env)
+
+Make sure you have ipykernel installed and use ipython kernel install to drop the kernelspec in the right location for python2. Then ipython3 kernel install for Python3. Now you should be able to chose between the 2 kernels regardless of whether you use jupyter notebook, ipython notebook or ipython3 notebook (the later two are deprecated).Note that if you want to install for a specific Python executable you can use the following trick:path/to/python -m ipykernel install <options>
+This works when using environments (venv,conda,...) and the <options> let you name your kernel (see --help). So you can doconda create -n py36-test python=3.6
+source activate py36-test
+python -m ipykernel install --name py36-test
+source deactivate
