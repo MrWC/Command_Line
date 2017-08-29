@@ -46,3 +46,4 @@ This works when using environments (venv,conda,...) and the <options> let you 
 source activate py36-test
 python -m ipykernel install --name py36-test
 source deactivate
+jupyterjupyter kernelspec remove py36-test
